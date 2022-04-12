@@ -13,7 +13,8 @@ public class Application {
         List<Integer> numbers = Randoms.pickUniqueNumbersInRange(1, 9, 3);
 
         //2. 사용자 정답값 입력 받는 기능
-
+        System.out.print("숫자를 입력해주세요 : ");
+        String input = Console.readLine();
 
         //3. 입력된 숫자가 정답에 존재하는지 체크하는 기능
 
