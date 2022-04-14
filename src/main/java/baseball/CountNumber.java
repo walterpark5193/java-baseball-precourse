@@ -2,7 +2,7 @@ package baseball;
 
 import java.util.List;
 
-public class CompareNumber {
+public class CountNumber {
     public int countBallNumber(String userInput, List<Integer> answer) {
         int containCnt = 0;     //정답에 존재하는 숫자 갯수
         for (Integer integer : answer) {

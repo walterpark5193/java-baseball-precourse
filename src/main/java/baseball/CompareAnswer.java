@@ -1,6 +1,6 @@
 package baseball;
 
-public class CheckAnswer {
+public class CompareAnswer {
 
     public void countAnswer(int containCnt, int strikeCnt) {
         String msg = "";
@@ -16,12 +16,10 @@ public class CheckAnswer {
         System.out.println(msg);
     }
 
-    public boolean printAnswer(int strikeCnt) {
+    public void printAnswer(int strikeCnt) {
         if(checkAnswer(strikeCnt)) {
             System.out.println("3개의 숫자를 모두 맞히셨습니다! 게임 종료");
-            return true;
         }
-        return false;
     }
 
     public boolean checkAnswer(int strikeCnt) {
