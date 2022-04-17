@@ -25,7 +25,9 @@ public class ManageUserInput {
     public void inputValidation(String input){
         checkEmpty(input);  //공백 체크
         checkLength(input); //입력 길이 체크
-        checkRange(input);  //입력 값 범위 체크
+        for(int i=0; i<input.length(); i++){
+            checkRange((Integer.parseInt(String.valueOf(input.charAt(i)))));  //입력 값 범위 체크
+        }
     }
 
     public void replayInputValidation(String input){
@@ -52,11 +54,13 @@ public class ManageUserInput {
         }
     }
 
-    public void checkRange(String input) {
-        int inputNum = Integer.parseInt(input);
-        if(inputNum < MIN_VALUE || inputNum > MAX_VALUE){
-            throw new IllegalArgumentException();
+    public void checkRange(int inputNum) {
+        for(int i=0; i<3; i++) {
+            if(inputNum < MIN_VALUE || inputNum > MAX_VALUE){
+                throw new IllegalArgumentException();
+            }
         }
+
     }
 
     public void checkReplayValue(String input) {
