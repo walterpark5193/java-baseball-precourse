@@ -1,8 +1,11 @@
-package baseball;
+package baseball.domain;
 
 import java.util.List;
 
 public class CountNumber {
+
+    public static final int ANSWER_COUNT = 3;
+
     public int countBallNumber(String userInput, List<Integer> answer) {
         int containCnt = 0;     //정답에 존재하는 숫자 갯수
         for (Integer integer : answer) {
@@ -25,5 +28,9 @@ public class CountNumber {
 
     public int checkStrike(Integer answer, Integer userInput, int cnt) {
         return answer.equals(userInput)?++cnt:cnt;
+    }
+
+    public boolean checkAnswer(int strikeCnt) {
+        return strikeCnt == ANSWER_COUNT;
     }
 }
